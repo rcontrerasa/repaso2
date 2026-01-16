@@ -8,4 +8,5 @@ echo "EXPOSE 8000 " >> Dockerfile
 echo "CMD ["python3", "/home/myapp/server.py"]" >> Dockerfile
 
 docker build -t webflask .
-docker run -d -p 8000:8000 webflask webflask
+docker run -t -d -p 8000:8000 webflask webflask
+docker ps -a
